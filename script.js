@@ -57,3 +57,36 @@ function updateRailingThumbnails() {
 document.addEventListener("DOMContentLoaded", function () {
     updateRailingThumbnails();
 });
+
+const solarPhotos = [
+    "images/solar1.jpeg",
+    "images/solar2.jpeg",
+    "images/solar3.jpeg",
+    "images/solar4.jpeg",
+    "images/solar5.jpeg",
+    "images/solar6.jpeg"
+];
+
+let solarPhotoIndex = 0;
+
+function showSolarPhoto(index) {
+    solarPhotoIndex = index;
+
+    document.getElementById("solarMainImage").src =
+        solarPhotos[solarPhotoIndex];
+}
+
+function changeSolarPhoto(direction) {
+    solarPhotoIndex += direction;
+
+    if (solarPhotoIndex >= solarPhotos.length) {
+        solarPhotoIndex = 0;
+    }
+
+    if (solarPhotoIndex < 0) {
+        solarPhotoIndex = solarPhotos.length - 1;
+    }
+
+    document.getElementById("solarMainImage").src =
+        solarPhotos[solarPhotoIndex];
+}
