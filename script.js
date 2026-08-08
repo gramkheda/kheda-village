@@ -1,0 +1,12 @@
+const railingPhotos=["images/railing1.jpeg","images/railing2.jpeg","images/railing3.jpeg","images/railing4.jpeg","images/railing5.jpeg","images/railing6.jpeg"];
+const solarPhotos=["images/solar1.jpeg","images/solar2.jpeg","images/solar3.jpeg","images/solar4.jpeg","images/solar5.jpeg","images/solar6.jpeg"];
+const backgroundImages=["images/village1.jpeg","images/village2.jpeg","images/village3.jpeg"];
+let railingPhotoIndex=0,solarPhotoIndex=0,backgroundIndex=0;
+function updateThumbnails(gallery,index){document.querySelectorAll(`.gallery-thumbnails[data-gallery="${gallery}"] img`).forEach((img,i)=>img.classList.toggle("active",i===index));}
+function setImage(id,src){const img=document.getElementById(id);if(!img)return;img.classList.add("is-changing");setTimeout(()=>{img.src=src;img.classList.remove("is-changing")},120)}
+function showRailingPhoto(index){if(index<0||index>=railingPhotos.length)return;railingPhotoIndex=index;setImage("railingMainImage",railingPhotos[index]);updateThumbnails("railing",index)}
+function changeRailingPhoto(direction){railingPhotoIndex=(railingPhotoIndex+direction+railingPhotos.length)%railingPhotos.length;showRailingPhoto(railingPhotoIndex)}
+function showSolarPhoto(index){if(index<0||index>=solarPhotos.length)return;solarPhotoIndex=index;setImage("solarMainImage",solarPhotos[index]);updateThumbnails("solar",index)}
+function changeSolarPhoto(direction){solarPhotoIndex=(solarPhotoIndex+direction+solarPhotos.length)%solarPhotos.length;showSolarPhoto(solarPhotoIndex)}
+function changeBackground(){const header=document.querySelector("header");if(!header)return;backgroundIndex=(backgroundIndex+1)%backgroundImages.length;header.style.backgroundImage=`linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.48)),url("${backgroundImages[backgroundIndex]}")`}
+document.addEventListener("DOMContentLoaded",()=>{updateThumbnails("railing",0);updateThumbnails("solar",0);const toggle=document.getElementById("menuToggle"),menu=document.getElementById("navMenu"),nav=document.getElementById("navbar");if(toggle&&menu){toggle.addEventListener("click",()=>{const open=menu.classList.toggle("open");toggle.setAttribute("aria-expanded",String(open))});menu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{menu.classList.remove("open");toggle.setAttribute("aria-expanded","false")}))}window.addEventListener("scroll",()=>nav?.classList.toggle("scrolled",window.scrollY>25));setInterval(changeBackground,5000)});
