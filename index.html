@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="hi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ग्राम खेड़ा — गांव की पहचान, विकास कार्य और स्थान की जानकारी।">
+    <title>ग्राम खेड़ा | अपना गांव • अपनी पहचान • अपना विकास</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+    <a class="logo" href="#top" aria-label="ग्राम खेड़ा होम">🏔️ <span>ग्राम खेड़ा</span></a>
+
+    <button class="nav-toggle" id="navToggle" type="button"
+            aria-label="मेनू खोलें" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-menu" id="navMenu">
+        <li><a href="#top">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#works">Development</a></li>
+        <li><a href="#map">Map</a></li>
+    </ul>
+</nav>
+
+<main id="top">
+    <header class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero">
+            <span class="hero-badge">🌿 उत्तराखंड का सुंदर गांव</span>
+            <h1>ग्राम खेड़ा</h1>
+            <p>अपना गांव • अपनी पहचान • अपना विकास</p>
+            <a class="btn btn-primary" href="#about">Explore <span>↓</span></a>
+        </div>
+        <div class="hero-scroll">SCROLL <span>↓</span></div>
+    </header>
+
+    <section id="about" class="section about-section">
+        <div class="section-heading">
+            <span class="section-kicker">हमारी पहचान</span>
+            <h2>हमारा गांव</h2>
+            <p>उत्तराखंड के सुंदर पहाड़ों में स्थित ग्राम खेड़ा।</p>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="stats">
+            <div class="stat-card">
+                <span class="stat-icon">👨‍👩‍👧‍👦</span>
+                <strong>30+</strong>
+                <span>परिवार</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">🏠</span>
+                <strong>60+</strong>
+                <span>जनसंख्या</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section projects-section">
+        <div class="section-heading">
+            <span class="section-kicker">गांव के लिए</span>
+            <h2>विकास कार्य</h2>
+            <p>गांव की सुविधा और बेहतर भविष्य के लिए किए जा रहे प्रमुख कार्य।</p>
+        </div>
+
+        <div class="cards">
+            <div class="card project-card">
+                <span class="card-icon">🛣️</span>
+                <h3>सड़क</h3>
+                <p>बेहतर आवागमन और गांव को जोड़ने के लिए विकास।</p>
+            </div>
+            <div class="card project-card">
+                <span class="card-icon">🚰</span>
+                <h3>पेयजल</h3>
+                <p>स्वच्छ और सुविधाजनक पेयजल व्यवस्था की दिशा में प्रयास।</p>
+            </div>
+            <div class="card project-card">
+                <span class="card-icon">🏏</span>
+                <h3>खेल मैदान</h3>
+                <p>युवाओं और बच्चों के लिए बेहतर खेल सुविधाएं।</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="works" class="section works">
+        <div class="section-heading">
+            <span class="section-kicker">प्रगति की झलक</span>
+            <h2>गाँव में हुए विकास कार्य</h2>
+            <p>वास्तविक कार्यों की तस्वीरों के माध्यम से गांव के विकास की झलक।</p>
+        </div>
+
+        <article class="work-card">
+            <div class="work-gallery" data-gallery="railing">
+                <img id="railingMainImage" src="images/railing1.jpeg"
+                     alt="ग्राम खेड़ा रैलिंग निर्माण कार्य" loading="eager">
+                <button class="gallery-btn prev" type="button"
+                        onclick="changeRailingPhoto(-1)" aria-label="पिछली रैलिंग फोटो">❮</button>
+                <button class="gallery-btn next" type="button"
+                        onclick="changeRailingPhoto(1)" aria-label="अगली रैलिंग फोटो">❯</button>
+            </div>
+
+            <div class="gallery-thumbnails" data-gallery="railing">
+                <img src="images/railing1.jpeg" onclick="showRailingPhoto(0)" alt="रैलिंग फोटो 1" loading="lazy">
+                <img src="images/railing2.jpeg" onclick="showRailingPhoto(1)" alt="रैलिंग फोटो 2" loading="lazy">
+                <img src="images/railing3.jpeg" onclick="showRailingPhoto(2)" alt="रैलिंग फोटो 3" loading="lazy">
+                <img src="images/railing4.jpeg" onclick="showRailingPhoto(3)" alt="रैलिंग फोटो 4" loading="lazy">
+                <img src="images/railing5.jpeg" onclick="showRailingPhoto(4)" alt="रैलिंग फोटो 5" loading="lazy">
+                <img src="images/railing6.jpeg" onclick="showRailingPhoto(5)" alt="रैलिंग फोटो 6" loading="lazy">
+            </div>
+
+            <div class="work-content">
+                <h3>🛡️ रैलिंग निर्माण कार्य</h3>
+                <p>ग्राम खेड़ा में ग्रामीणों की सुरक्षा एवं सुविधा को ध्यान में रखते हुए रैलिंग निर्माण का कार्य कराया गया।</p>
+                <div class="work-details">
+                    <span>📍 ग्राम खेड़ा</span>
+                    <span>🏗️ विकास कार्य</span>
+                    <span>✅ कार्य पूर्ण</span>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section id="solar-work" class="section works works-alt">
+        <div class="section-heading">
+            <span class="section-kicker">स्वच्छ ऊर्जा</span>
+            <h2>सोलर लाइट परियोजना</h2>
+            <p>रात के समय बेहतर प्रकाश व्यवस्था के लिए किए गए कार्य की झलक।</p>
+        </div>
+
+        <article class="work-card">
+            <div class="work-gallery" data-gallery="solar">
+                <img id="solarMainImage" src="images/solar1.jpeg"
+                     alt="ग्राम खेड़ा सोलर लाइट कार्य" loading="lazy">
+                <button class="gallery-btn prev" type="button"
+                        onclick="changeSolarPhoto(-1)" aria-label="पिछली सोलर फोटो">❮</button>
+                <button class="gallery-btn next" type="button"
+                        onclick="changeSolarPhoto(1)" aria-label="अगली सोलर फोटो">❯</button>
+            </div>
+
+            <div class="gallery-thumbnails" data-gallery="solar">
+                <img src="images/solar1.jpeg" onclick="showSolarPhoto(0)" alt="सोलर फोटो 1" loading="lazy">
+                <img src="images/solar2.jpeg" onclick="showSolarPhoto(1)" alt="सोलर फोटो 2" loading="lazy">
+                <img src="images/solar3.jpeg" onclick="showSolarPhoto(2)" alt="सोलर फोटो 3" loading="lazy">
+                <img src="images/solar4.jpeg" onclick="showSolarPhoto(3)" alt="सोलर फोटो 4" loading="lazy">
+                <img src="images/solar5.jpeg" onclick="showSolarPhoto(4)" alt="सोलर फोटो 5" loading="lazy">
+                <img src="images/solar6.jpeg" onclick="showSolarPhoto(5)" alt="सोलर फोटो 6" loading="lazy">
+            </div>
+
+            <div class="work-content">
+                <h3>☀️ सोलर लाइट स्थापना कार्य</h3>
+                <p>ग्राम खेड़ा में ग्रामीणों की सुविधा और रात के समय बेहतर प्रकाश व्यवस्था के लिए सोलर लाइटें स्थापित की गईं।</p>
+                <div class="work-details">
+                    <span>📍 ग्राम खेड़ा</span>
+                    <span>☀️ सोलर लाइट</span>
+                    <span>✅ कार्य पूर्ण</span>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section id="map" class="map-section">
+        <div class="section-heading">
+            <span class="section-kicker">स्थान</span>
+            <h2>📍 Google Map</h2>
+            <p>ग्राम खेड़ा और आसपास के क्षेत्र का स्थान देखें।</p>
+        </div>
+
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2053.1676533216837!2d78.6070745!3d30.1399806!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3909090d5b91180d%3A0x5d7916d17f992317!2sDevprayag%2C%20Uttarakhand!5e1!3m2!1sen!2sin!4v1786106324990!5m2!1sen!2sin"
+                title="Devprayag, Uttarakhand Google Map"
+                width="100%"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 ग्राम खेड़ा · अपना गांव • अपनी पहचान • अपना विकास</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
