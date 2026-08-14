@@ -11,3 +11,236 @@ section{padding:85px 7%}.section-heading{text-align:center;max-width:760px;margi
 @media(max-width:600px){header{min-height:560px}.hero h1{font-size:48px}.hero p{font-size:18px}section{padding:65px 5%}.stats-section{padding:25px 5% 60px}.stat-box{padding:21px 10px}.stat-box h3{font-size:30px}.work-card{padding:14px;border-radius:20px}.work-card h3{font-size:25px}.project-intro{font-size:15px}.work-gallery{height:300px}.gallery-thumbnails{grid-template-columns:repeat(3,1fr);gap:7px}.gallery-thumbnails img{height:68px}.gallery-btn{width:40px;height:40px;font-size:18px}.gallery-btn.prev{left:10px}.gallery-btn.next{right:10px}.map-container{border-radius:17px}.map-container iframe{height:350px}}
 @media(max-width:380px){.stats{grid-template-columns:1fr}.logo{font-size:17px}.hero h1{font-size:42px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition-duration:.01ms!important}}
+/* ================================
+   KHEDA CARNIVAL PAGE
+================================ */
+
+.carnival-hero {
+    min-height: 75vh;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.50),
+            rgba(0,0,0,0.50)
+        ),
+        url("images/carnival1.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: white;
+
+    padding: 100px 20px 50px;
+}
+
+.carnival-overlay {
+    max-width: 900px;
+}
+
+.carnival-overlay h1 {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.carnival-overlay p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+
+/* Introduction */
+
+.carnival-section {
+    padding: 80px 8%;
+    text-align: center;
+    background: #f4f7f4;
+}
+
+.carnival-section h2,
+.event-details h2,
+.carnival-gallery h2 {
+    font-size: 36px;
+    color: #2E7D32;
+    margin-bottom: 25px;
+}
+
+.carnival-intro {
+    max-width: 850px;
+    margin: 0 auto 45px;
+    font-size: 20px;
+    color: #555;
+}
+
+
+/* Cards */
+
+.carnival-cards {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.carnival-card {
+    background: white;
+    padding: 35px 25px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.carnival-card:hover {
+    transform: translateY(-8px);
+}
+
+.carnival-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.carnival-card h3 {
+    color: #2E7D32;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.carnival-card p {
+    color: #666;
+    font-size: 16px;
+}
+
+
+/* Event Details */
+
+.event-details {
+    padding: 80px 8%;
+    text-align: center;
+    background: white;
+}
+
+.event-info {
+    max-width: 1000px;
+    margin: 40px auto 0;
+
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+}
+
+.event-info div {
+    background: #f4f7f4;
+    padding: 30px;
+
+    border-radius: 15px;
+}
+
+.event-info span {
+    font-size: 40px;
+}
+
+.event-info h3 {
+    color: #2E7D32;
+    margin: 10px 0;
+}
+
+.event-info p {
+    color: #666;
+}
+
+
+/* Gallery */
+
+.carnival-gallery {
+    padding: 80px 8%;
+    background: #f4f7f4;
+    text-align: center;
+}
+
+.carnival-gallery > p {
+    color: #666;
+    margin-bottom: 35px;
+}
+
+.carnival-photo-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+}
+
+.carnival-photo {
+    height: 250px;
+    overflow: hidden;
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.10);
+}
+
+.carnival-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+
+    transition: 0.4s;
+}
+
+.carnival-photo:hover img {
+    transform: scale(1.08);
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .carnival-overlay h1 {
+        font-size: 42px;
+    }
+
+    .carnival-overlay p {
+        font-size: 18px;
+    }
+
+    .carnival-hero {
+        min-height: 65vh;
+    }
+
+    .carnival-section,
+    .event-details,
+    .carnival-gallery {
+        padding: 60px 5%;
+    }
+
+    .carnival-section h2,
+    .event-details h2,
+    .carnival-gallery h2 {
+        font-size: 30px;
+    }
+
+    .carnival-photo {
+        height: 220px;
+    }
+
+}
